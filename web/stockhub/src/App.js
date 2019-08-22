@@ -8,7 +8,10 @@ class App extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <ConnectedSearchBar />
+        <h1 className="App-header">stockhub</h1>
+        <div className="App-search">
+          <ConnectedSearchBar />
+        </div>
       </div>
     );
   }

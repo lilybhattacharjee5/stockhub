@@ -1,3 +1,5 @@
+import "./SearchBar.css";
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchStockSearchData } from "./stockSearchActions";
@@ -38,7 +40,7 @@ class SearchBar extends React.PureComponent {
         <input type="search" id="stockSearch" placeholder="Facebook" value={ this.state.inputValue } onChange={ this.handleChange } />
         <div className="dropdown">
           { stockTrie.searchResult.map(
-            (stock, id) => <p key={ id }>{ stock }</p>
+            (stock, id) => <p key={ id }><a className="nameLink" href={ `/${stock}` }>{ stock }</a></p>
           ) }
         </div>
       </div>
